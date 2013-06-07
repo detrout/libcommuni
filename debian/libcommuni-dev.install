@@ -1,0 +1,3 @@
+usr/include/qt4/Communi/*
+usr/lib/*/lib*.so
+usr/share/qt4/mkspecs/features/*
