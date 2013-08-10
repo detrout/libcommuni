@@ -4,8 +4,20 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+
 %:
 	dh $@   --buildsystem qmake_qt4
 
 override_dh_auto_configure:
-	./configure
+	./configure --config QMAKE_CFLAGS="$(CFLAGS)" \
+	            --config QMAKE_CXXFLAGS="$(CXXFLAGS)" \
+	            --config QMAKE_LFLAGS="$(LDFLAGS)"
+
+override_dh_auto_clean:
+	dh_auto_clean
+	-rm libcommuni/.qmake.cache
+	-rm libcommuni/communi-config.prf
