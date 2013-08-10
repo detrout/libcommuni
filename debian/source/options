@@ -1,0 +1,2 @@
+extend-diff-ignore=^.qmake\.cache$
+extend-diff-ignore=^communi-config.prf$
