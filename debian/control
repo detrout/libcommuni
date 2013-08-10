@@ -12,7 +12,7 @@ Package: libcommuni-dev
 Section: libdevel
 Architecture: any
 Depends: libcommuni2 (= ${binary:Version}), ${misc:Depends}
-Description: A cross-platform IRC framework written with Qt
+Description: cross-platform IRC framework written with Qt
  provides a library allowing you to work with various IRC applications
  in a Qt compatible way.
  .
