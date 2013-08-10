@@ -11,7 +11,7 @@ Vcs-Browser: https://github.com/detrout/libcommuni
 Package: libcommuni-dev
 Section: libdevel
 Architecture: any
-Depends: libcommuni2 (= ${binary:Version})
+Depends: libcommuni2 (= ${binary:Version}), ${misc:Depends}
 Description: A cross-platform IRC framework written with Qt
  provides a library allowing you to work with various IRC applications
  in a Qt compatible way.
@@ -23,5 +23,5 @@ Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: cross-platform IRC framework written with Qt
-  provides a library allowing you to work with various IRC
+ provides a library allowing you to work with various IRC
  applications in a Qt compatible way.
