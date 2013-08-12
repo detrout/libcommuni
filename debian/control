@@ -19,7 +19,6 @@ Description: cross-platform IRC framework written with Qt
  This contains the headers necessary to develop new applications.
 
 Package: libcommuni2
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: cross-platform IRC framework written with Qt
